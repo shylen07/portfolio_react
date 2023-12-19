@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+a{
+  text-decoration: None;
+  color: white;
+}
+p{
+  color: white;
+  line-height: 1.5rem;
+}
+h2{
+  color: white;
+}
+ul{
+  list-style: none;
+}
+
+/*-----Navbar Starts-----*/
+.nav{
+  position: fixed;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  
+
+}
+.navbar{
+  width: 60vmax;
+  padding: 0 2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  
+}
+.logo h1{
+  font-size: 2.5rem;
+  font-family: 'Dancing Script';
+}
+.links{
+  display: flex;
+}
+.links li{
+  list-style: none;
+  padding: 0 1rem;
+}
+.links li a {
+  padding: 0.5rem 0.5rem;
+}
+
+.links li a.active {
+  color: #fff;
+  border-bottom: 1px solid white;
+}
+@media screen and (max-width : 540px) {
+  .logo{
+    display: none;
+  }
+}
+/*-----Navbar Ends-----*/
+
+/*-----Home Starts-----*/
+.hero{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(to right, white 1px, transparent 1px);
+  background-size: 100px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.intro{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 65vh;
+  width: 60vmax;
+  color: white;
+  z-index: 1;
+  padding: 4rem 2rem;
+}
+@media screen and (max-width:600px) {
+
+  .intro{
+      padding: 2rem 3rem;
+      height: 85vh;
+      
+  }
+}
+.intro p{
+  line-height: 2;
+  padding: 1rem 0;
+}
+.see_more{
+  width: 15rem;
+  background: transparent;
+  cursor: pointer;
+  padding: .5rem 0.5rem .5rem 0rem;
+}
+.arrow-icon {
+  animation: slideLeft 1s ease-in-out infinite alternate;
+}
+@keyframes slideLeft {
+  0% {
+      transform: translateX(1px);
+  }
+  50%{
+      transform: translateX(40px);
+  }
+  75%{
+      transform: translateX(20px);
+  }
+  100% {
+      transform: translateX(40px); /* Adjust the distance to move left */
+  }
+}
+
+.social{
+  margin: 2rem 0rem;
+}
+.social ion-icon{
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
+  padding: 0 0.5rem 0 0;
+}
+
+
+/*-----Home Ends-----*/
+
+/*-----About Page Starts-----*/
+
+.about-section{
+  height: 80vh;
+  width: 80vmax;
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  gap: 2rem;
+}
+
+.about{
+  display: flex;
+  gap: 2rem;
+  line-height: 3rem;
+}
+.about .image{
+  height: 200px;
+  width: 200px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: url('/public/photo.jpeg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+.info{
+  width: 80%; 
+}
+
+.tech-stack{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;  
+  gap: 3rem;
+}
+.tech-stack h2{
+  width: 55%;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  border-bottom: 2px solid white ;
+}
+
+.stack{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.front-end, .back-end, .database{ 
+  color: white;
+  width: 33%;
+}
+.front-end h3, .back-end h3, .database h3{
+  padding: 0rem 0rem 1rem 0rem;
+}
+.front-end ul, .back-end ul, .database ul{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+}
+.front-end ul li , .back-end ul li, .database ul li{
+  border: 1px solid grey;
+  backdrop-filter: blur(20px);
+  box-shadow: 2px 1px grey;
+  width: 10rem;
+  text-align: center;
+  border-radius: 2px;
+  margin: 0.3rem;
+}
+
+
+@media screen and (max-width:750px) {
+  .about{
+    display: none;
+  }
+  .stack{
+    width: 100%;
+    flex-direction: column;
+  }
+  .front-end, .back-end, .database{
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+  .front-end ul, .back-end ul, .database ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: white;
+  font-size: 1.2rem;
+}
+.contact input{
+  height: 3rem;
+  font-size: 1rem;
+  width: 40vmax;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.contact .message{
+  height: 10rem;
+  width: 40vmax;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.contact .btn{
+  width: 5rem;
+  font-size: 1.3rem;
+  background: #4BBDC5;
+}
+.btn:hover{
+  background: #4B9EC5;
+}
